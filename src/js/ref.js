@@ -6,14 +6,10 @@ const ref = {
 import { debounce } from 'lodash';
 import makeCountryMarkup from '../templating/list-countries.hbs';
 import { fetchCountries } from './fetchCountries';
-// fetchCountries('italy').then(data => );
 
 const handleCountry = () => {
-  //   console.log(ref.input.value);
-  //   ref.list.insertAdjacentHTML(
-  //     'afterbegin',
-  //     fetchCountries(ref.input.value).then(data => makeCountryMarkup(data)),
-  //   );
+  ref.list.innerHTML = fetchCountries(ref.input.value).then(data => makeCountryMarkup(data));
+
   fetchCountries(ref.input.value).then(data => console.log(makeCountryMarkup(data)));
 };
 
