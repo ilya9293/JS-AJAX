@@ -2,9 +2,14 @@ body {
   font-size: 30px;
 }
 
+.container {
+  display: block;
+  margin: 40px auto;
+  width: 30%;
+}
+
 .field-country {
   display: block;
-  margin: 100px auto;
   padding: 10px 10px;
-  width: 30%;
+  width: 100%;
 }

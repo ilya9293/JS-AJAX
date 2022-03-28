@@ -1,11 +1,20 @@
 const ref = {
   input: document.querySelector('.field-country'),
+  list: document.querySelector('.list-countries'),
 };
 
-const handleCountry = e => {
-   console.log(ref.input.value);
+import { debounce } from 'lodash';
+import makeCountryMarkup from '../templating/list-countries.hbs';
+import { fetchCountries } from './fetchCountries';
+// fetchCountries('italy').then(data => );
+
+const handleCountry = () => {
+  //   console.log(ref.input.value);
+  //   ref.list.insertAdjacentHTML(
+  //     'afterbegin',
+  //     fetchCountries(ref.input.value).then(data => makeCountryMarkup(data)),
+  //   );
+  fetchCountries(ref.input.value).then(data => console.log(makeCountryMarkup(data)));
 };
 
-handleCountry();
-
-ref.input.addEventListener('input', handleCountry);
+ref.input.addEventListener('input', debounce(handleCountry, 500));
