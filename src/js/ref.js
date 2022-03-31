@@ -7,10 +7,11 @@ import { debounce } from 'lodash';
 import makeCountryMarkup from '../templating/list-countries.hbs';
 import { fetchCountries } from './fetchCountries';
 
-const handleCountry = () => {
-  ref.list.innerHTML = fetchCountries(ref.input.value).then(data => makeCountryMarkup(data));
-
-  fetchCountries(ref.input.value).then(data => console.log(makeCountryMarkup(data)));
+const handleCountry = (e) => {
+   console.log(e.currentTarget);
+  fetchCountries(ref.input.value)
+    .then(data => (ref.list.innerHTML = makeCountryMarkup(data)))
+    .catch(error => console.log(error));
 };
 
 ref.input.addEventListener('input', debounce(handleCountry, 500));
