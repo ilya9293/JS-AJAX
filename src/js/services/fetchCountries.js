@@ -1,5 +1,6 @@
-export const fetchCountries = searchQuery =>
-  fetch(`https://restcountries.com/v2/name/${searchQuery}`).then(response => {
+export const fetchCountries = searchQuery => {
+  const API_URL = 'https://restcountries.com/v2/name/';
+  return fetch(`${API_URL}${searchQuery}`).then(response => {
     //  console.log(response);
     if (response.ok) {
       return response.json();
@@ -7,3 +8,4 @@ export const fetchCountries = searchQuery =>
     return Promise.reject('Not Found');
     //  throw new Error("Not Found");
   });
+};

@@ -3,14 +3,25 @@ body {
 }
 
 .container {
-  display: block;
-  margin: 40px auto;
-  width: 30%;
+  margin: 0 auto;
+  width: 1080px;
+}
+
+.container-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .field-country {
   display: block;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px 10px;
-  width: 100%;
+  width: 450px;
 }
 
+.list-countries {
+   margin-left: auto;
+}
