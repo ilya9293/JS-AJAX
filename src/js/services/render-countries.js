@@ -19,6 +19,7 @@ const renderListCountries = data => {
 
 const showError = err => {
   ref.section.textContent = 'Ошибка! Страна не найдена';
+//   showError(err)
 };
 
 export { ref, renderOneCountry, showTooMuchCountries, renderListCountries, showError };
