@@ -8,15 +8,16 @@ const renderOneCountry = data => {
   ref.section.innerHTML = makeOneCountryMarkup(data);
 };
 
-const showTooMuchCountries = data => {
-  ref.section.textContent = 'Слишком много стран!';
+const showTooMuchCountries = countriesQuantity => {
+  //   ref.section.textContent = 'Слишком много стран!';
+  showAlert((ALERTS.MATCH_RESULTS, `${countriesQuantity.length} reults, too many countries`));
 };
 
 const renderListCountries = data => {
   ref.section.innerHTML = makeCountryMarkup(data);
 };
 
-const showError = () => {
+const showError = err => {
   ref.section.textContent = 'Ошибка! Страна не найдена';
 };
 
