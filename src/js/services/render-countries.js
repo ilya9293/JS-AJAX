@@ -18,10 +18,9 @@ const renderListCountries = data => {
   ref.section.innerHTML = makeCountryMarkup(data);
 };
 
-const showError = err => {
-  ref.section.textContent = 'Ошибка! Страна не найдена';
-  //   showError(err)
-  
+const showError = () => {
+  //   ref.section.textContent = 'Ошибка! Страна не найдена';
+  showErrorMessage('Error', 'something went wrong');
 };
 
 export { ref, renderOneCountry, showTooMuchCountries, renderListCountries, showError };
