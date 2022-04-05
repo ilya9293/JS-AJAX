@@ -1,7 +1,7 @@
 export const fetchCountries = searchQuery => {
   const API_URL = 'https://restcountries.com/v2/name/';
   return fetch(`${API_URL}${searchQuery}`).then(response => {
-    //  console.log(response);
+   //   console.log(response);
     if (response.ok) {
       return response.json();
     }
