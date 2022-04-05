@@ -40,4 +40,4 @@ var t,e=arguments[3];!function(e,n){"object"==typeof exports&&"undefined"!=typeo
 },{"../data/refs":"FONA","../../templating/list-countries":"iLIf","../../templating/one-country.hbs":"gz7W","../vendors/alert":"Ql2j"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");var e=require("lodash"),r=require("./js/services/fetchCountries"),s=require("./js/services/render-countries");const n=()=>{const e=s.ref.input.value;(0,r.fetchCountries)(e).then(e=>1===e.length?(0,s.renderOneCountry)(e):e.length>10?(0,s.showTooMuchCountries)(e):void(0,s.renderListCountries)(e)).catch(r=>{if(!e)return s.ref.section.innerHTML="";(0,s.showError)()})};s.ref.input.addEventListener("input",(0,e.debounce)(n,500));
 },{"./sass/main.scss":"clu1","lodash":"B1iE","./js/services/fetchCountries":"i5PB","./js/services/render-countries":"Rsx0"}]},{},["Focm"], null)
-//# sourceMappingURL=/js-ajax/src.9b116a30.js.map
+//# sourceMappingURL=/js-ajax/src.74c5c936.js.map
