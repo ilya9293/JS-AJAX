@@ -20,7 +20,8 @@ const renderListCountries = data => {
 
 const showError = () => {
   //   ref.section.textContent = 'Ошибка! Страна не найдена';
-  showErrorMessage('Error', 'something went wrong');
+  ref.section.innerHTML = '';
+  showAlert((ALERTS.MATCH_RESULTS, `Error, Country not found`));
 };
 
 export { ref, renderOneCountry, showTooMuchCountries, renderListCountries, showError };
