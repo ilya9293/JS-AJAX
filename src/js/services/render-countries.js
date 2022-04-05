@@ -10,6 +10,7 @@ const renderOneCountry = data => {
 
 const showTooMuchCountries = countriesQuantity => {
   //   ref.section.textContent = 'Слишком много стран!';
+  ref.section.innerHTML = '';
   showAlert((ALERTS.MATCH_RESULTS, `${countriesQuantity.length} reults, too many countries`));
 };
 
@@ -19,7 +20,8 @@ const renderListCountries = data => {
 
 const showError = err => {
   ref.section.textContent = 'Ошибка! Страна не найдена';
-//   showError(err)
+  //   showError(err)
+  
 };
 
 export { ref, renderOneCountry, showTooMuchCountries, renderListCountries, showError };
